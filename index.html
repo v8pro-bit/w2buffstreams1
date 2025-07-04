@@ -15,7 +15,7 @@
             <div class="logo"><span>BUFFSTREAMS</span></div>
         </div>
         <div class="league-tabs" id="leagueTabs">
-            <div class="league-tab active" data-league="All">All</div>
+            <div class="league-tab active" data-league="All">All Streams</div>
             <div class="league-tab" data-league="MMA">MMA Streams</div>
             <div class="league-tab" data-league="BOXING">BOXING Streams</div>
             <div class="league-tab" data-league="NBA">NBA Streams</div>
@@ -30,10 +30,21 @@
         </div>
     </header>
 
+
+    <center>
+        <div
+            style="background-color:#1e242c; color:#ccc; padding:12px 16px; border-radius:8px; border:1px solid #30363d; margin-bottom:15px; font-size:14px; font-weight:500; text-align:center; width: 50%; margin-top: 10px; ">
+            ⚠️ <strong>Note:</strong> Buffstreams is <span style="color:#58a6ff;">100% free for fans</span>.
+            <br>Please <strong>bookmark</strong> this page to watch your favorite sports anytime.
+        </div>
+    </center>
+
+
     <div class="container">
         <div class="content-box">
             <section class="main-content">
                 <div class="ad-top">
+
                     <script type="text/javascript">
                         atOptions = {
                             'key': '31037bfc95eea319827433190321bc99',
@@ -45,6 +56,7 @@
                     </script>
                     <script type="text/javascript"
                         src="//www.highperformanceformat.com/31037bfc95eea319827433190321bc99/invoke.js"></script>
+
                 </div>
 
                 <input type="text" class="search" id="searchBox" placeholder="Search team & League ..."
@@ -278,7 +290,8 @@
                 </div>
             </section>
 
-            <aside class="sidebar">
+            <div class="sidebar">
+
                 <script type="text/javascript">
                     atOptions = {
                         'key': 'c056290ae6472fcc026e9aa3e4433ff2',
@@ -308,7 +321,7 @@
 
 
 
-            </aside>
+            </div>
         </div>
     </div>
 
@@ -348,30 +361,26 @@
             });
         });
     </script>
-    <!-- Histats.com  (div with counter) -->
-    <div id="histats_counter" style="display: none !important;"></div>
+    <footer class="site-footer">
+        <div class="footer-container">
 
-    <!-- Histats.com  START  (async) -->
-    <script type="text/javascript">
-        var _Hasync = _Hasync || [];
-        _Hasync.push(['Histats.start', '1,4954898,4,511,95,18,00000000']);
-        _Hasync.push(['Histats.fasi', '1']);
-        _Hasync.push(['Histats.track_hits', '']);
+            <!-- Branding -->
+            <div class="footer-brand">
+                SportsOnline
+            </div>
 
-        (function () {
-            var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-            hs.src = ('//s10.histats.com/js15_as.js');
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-        })();
-    </script>
+            <!-- Message -->
+            <div class="footer-message">
+                Buffstreams is free – made for the fans
+            </div>
 
-    <noscript>
-        <a href="/" target="_blank">
-            <img src="//sstatic1.histats.com/0.gif?4954898&amp;101" alt="web stats" border="0"
-                style="display: none !important;" />
-        </a>
-    </noscript>
-    <!-- Histats.com  END -->
+            <!-- Credit -->
+            <div class="footer-credit">
+                Created by Buffstreams
+            </div>
+
+        </div>
+    </footer>
 </body>
 
 </html>
