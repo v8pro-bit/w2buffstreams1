@@ -1,291 +1,377 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BuffStreams - Live Sports</title>
-  <link href="./output.css" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/78013897?v=4">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuffStreams - Live Sports</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/78013897?v=4">
 </head>
 
 <body>
-  <header>
-    <div class="header-top">
-      <div class="logo"><span>BUFFSTREAMS</span></div>
-    </div>
-    <div class="league-tabs" id="leagueTabs">
-      <div class="league-tab active" data-league="All">All</div>
-      <div class="league-tab" data-league="MMA">MMA Streams</div>
-      <div class="league-tab" data-league="BOXING">BOXING Streams</div>
-      <div class="league-tab" data-league="NBA">NBA Streams</div>
-      <div class="league-tab" data-league="CFB">CFB Streams</div>
-      <div class="league-tab" data-league="NCAAB">NCAAB Streams</div>
-      <div class="league-tab" data-league="WWE">WWE Streams</div>
-      <div class="league-tab" data-league="MLB">MLB Streams</div>
-      <div class="league-tab" data-league="NFL">NFL Streams</div>
-      <div class="league-tab" data-league="NHL">NHL Streams</div>
-      <div class="league-tab" data-league="MLS">MLS Streams</div>
-      <div class="league-tab" data-league="Soccer">Soccer</div>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="content-box">
-      <section class="main-content">
-        <div class="ad-top">
-          <script type="text/javascript">
-            atOptions = {
-              'key': '31037bfc95eea319827433190321bc99',
-              'format': 'iframe',
-              'height': 90,
-              'width': 728,
-              'params': {}
-            };
-          </script>
-          <script type="text/javascript"
-            src="//www.highperformanceformat.com/31037bfc95eea319827433190321bc99/invoke.js"></script>
+    <header>
+        <div class="header-top">
+            <div class="logo"><span>BUFFSTREAMS</span></div>
         </div>
-
-        <input type="text" class="search" id="searchBox" placeholder="Search team & League ..."
-          onkeyup="searchMatches()">
-
-        <div id="matches">
-
-          <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/FanDuelSportsFlorida[USA]">
-            <div class="match-card">
-              <div class="match-league">MLB</div>
-              <div class="match-title">Miami Marlins vs Minnesota Twins
-              </div>
-              <div class="match-time">July 3, 2025 - 12:10 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/ex8001314">
-            <div class="match-card">
-              <div class="match-league">MLB</div>
-              <div class="match-title">Colorado Rockies vs Houston Astros
-              </div>
-              <div class="match-time">July 3, 2025 - 3:10 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/ex8007014">
-            <div class="match-card">
-              <div class="match-league">MLB</div>
-              <div class="match-title">Washington Nationals vs Detroit Tigers
-              </div>
-              <div class="match-time">July 3, 2025 - 6:45 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/ex8007011">
-            <div class="match-card">
-              <div class="match-league">MLB</div>
-              <div class="match-title">Toronto Blue Jays vs New York Yankees
-              </div>
-              <div class="match-time">July 3, 2025 - 7:07 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/exMIL-NYM-SNY">
-            <div class="match-card">
-              <div class="match-league">MLB</div>
-              <div class="match-title">New York Mets vs Milwaukee Brewers
-              </div>
-              <div class="match-time">July 3, 2025 - 7:10 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="MLB"
-            data-frame="https://topembed.pw/channel/FanDuelSportsSoutheast[USA]">
-            <div class="match-card">
-              <div class="match-league">MLB</div>
-              <div class="match-title">Atlanta Braves vs Los Angeles Angels
-              </div>
-              <div class="match-time">July 3, 2025 - 7:15 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/ESPNDeportes[USA]">
-            <div class="match-card">
-              <div class="match-league">MLB</div>
-              <div class="match-title">Chicago Cubs vs Cleveland Guardians
-              </div>
-              <div class="match-time">July 3, 2025 - 8:05 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/ex8001310">
-            <div class="match-card">
-              <div class="match-league">MLB</div>
-              <div class="match-title">Arizona Diamondbacks vs San Francisco Giants
-              </div>
-              <div class="match-time">July 3, 2025 - 9:40 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/MLBNetwork[USA]">
-            <div class="match-card">
-              <div class="match-league">MLB</div>
-              <div class="match-title">Seattle Mariners vs Kansas City Royals
-              </div>
-              <div class="match-time">July 3, 2025 - 10:10 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/exCWS-LAD-CHSN">
-            <div class="match-card">
-              <div class="match-league">MLB</div>
-              <div class="match-title">Los Angeles Dodgers vs Chicago White Sox
-              </div>
-              <div class="match-time">July 3, 2025 - 10:10 PM ET</div>
-            </div>
-          </div>
-
-          <div class="match-link" data-league="NBA" data-frame="https://topembed.pw/channel/ex7852758">
-            <div class="match-card">
-              <div class="match-league">WNBA</div>
-              <div class="match-title">New York Liberty vs Los Angeles Sparks
-              </div>
-              <div class="match-time">July 3, 2025 - 7:00 PM ET</div>
-            </div>
-          </div>
-
-          <div class="match-link" data-league="NBA" data-frame="https://topembed.pw/channel/ex7852757">
-            <div class="match-card">
-              <div class="match-league">WNBA</div>
-              <div class="match-title">Indiana Fever vs Las Vegas Aces
-              </div>
-              <div class="match-time">July 3, 2025 - 7:00 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="NBA" data-frame="https://topembed.pw/channel/ex7852759">
-            <div class="match-card">
-              <div class="match-league">WNBA</div>
-              <div class="match-title">Atlanta Dream vs Seattle Storm
-              </div>
-              <div class="match-time">July 3, 2025 - 7:30 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="NBA" data-frame="https://topembed.pw/channel/ex7852760">
-            <div class="match-card">
-              <div class="match-league">WNBA</div>
-              <div class="match-title">Dallas Wings vs Phoenix Mercury
-              </div>
-              <div class="match-time">July 3, 2025 - 8:00 PM ET</div>
-            </div>
-          </div>
-
-
-          <div class="match-link" data-league="NBA" data-frame="https">
-            <div class="match-card">
-              <div class="match-league">WNBA</div>
-              <div class="match-title">Minnesota Lynx vs Washington Mystics
-              </div>
-              <div class="match-time">July 3, 2025 - 8:00 PM ET</div>
-            </div>
-          </div>
-
-
-
-
-          <div class="match-link" data-league="NFL" data-frame="https://topembed.pw/channel/TSN4[Canada]">
-            <div class="match-card">
-              <div class="match-league">CFL</div>
-              <div class="match-title">Calgary Stampeders - Winnipeg Blue Bombers</div>
-              <div class="match-time">July 3, 2025 - 10:00 PM ET</div>
-            </div>
-          </div>
-
-
+        <div class="league-tabs" id="leagueTabs">
+            <div class="league-tab active" data-league="All">All</div>
+            <div class="league-tab" data-league="MMA">MMA Streams</div>
+            <div class="league-tab" data-league="BOXING">BOXING Streams</div>
+            <div class="league-tab" data-league="NBA">NBA Streams</div>
+            <div class="league-tab" data-league="CFB">CFB Streams</div>
+            <div class="league-tab" data-league="NCAAB">NCAAB Streams</div>
+            <div class="league-tab" data-league="WWE">WWE Streams</div>
+            <div class="league-tab" data-league="MLB">MLB Streams</div>
+            <div class="league-tab" data-league="NFL">NFL Streams</div>
+            <div class="league-tab" data-league="NHL">NHL Streams</div>
+            <div class="league-tab" data-league="MLS">MLS Streams</div>
+            <div class="league-tab" data-league="Soccer">Soccer</div>
         </div>
-      </section>
+    </header>
 
-      <aside class="sidebar">
-        <script type="text/javascript">
-          atOptions = {
-            'key': 'c056290ae6472fcc026e9aa3e4433ff2',
-            'format': 'iframe',
-            'height': 300,
-            'width': 160,
-            'params': {}
-          };
-        </script>
-        <script type="text/javascript"
-          src="//www.highperformanceformat.com/c056290ae6472fcc026e9aa3e4433ff2/invoke.js"></script>
+    <div class="container">
+        <div class="content-box">
+            <section class="main-content">
+                <div class="ad-top">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key': '31037bfc95eea319827433190321bc99',
+                            'format': 'iframe',
+                            'height': 90,
+                            'width': 728,
+                            'params': {}
+                        };
+                    </script>
+                    <script type="text/javascript"
+                        src="//www.highperformanceformat.com/31037bfc95eea319827433190321bc99/invoke.js"></script>
+                </div>
+
+                <input type="text" class="search" id="searchBox" placeholder="Search team & League ..."
+                    onkeyup="searchMatches()">
+
+                <div id="matches">
+
+                    <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/MLBNetwork[USA]">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Washington Nationals vs Boston Red Sox
+                            </div>
+                            <div class="match-time">July 4, 2025 - 11:05 PM ET</div>
+                        </div>
+                    </div>
 
 
 
-        <script type="text/javascript">
-          atOptions = {
-            'key': '4ef2fc17a7faded8a267471f28b41d6f',
-            'format': 'iframe',
-            'height': 600,
-            'width': 160,
-            'params': {}
-          };
-        </script>
-        <script type="text/javascript"
-          src="//www.highperformanceformat.com/4ef2fc17a7faded8a267471f28b41d6f/invoke.js"></script>
+                    <div class="match-link" data-league="MMA"
+                        data-frame="https://topembed.pw/channel/FOXSports2[Mexico]">
+                        <div class="match-card">
+                            <div class="match-league">PEL</div>
+                            <div class="match-title">Omar El Dafrawy vs Daniele Miceli
+                            </div>
+                            <div class="match-time">July 4, 2025 - 12:00 PM ET</div>
+                        </div>
+                    </div>
 
 
 
 
-      </aside>
+                    <div class="match-link" data-league="MLB"
+                        data-frame="https://topembed.pw/channel/FanDuelSportsOhio[USA]">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Cincinnati Reds vs Philadelphia Phillies
+                            </div>
+                            <div class="match-time">July 4, 2025 - 1:05 PM ET</div>
+                        </div>
+                    </div>
+
+                    <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/ex8011637">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Chicago Cubs vs St. Louis Cardinals
+                            </div>
+                            <div class="match-time">July 4, 2025 - 2:20 PM ET</div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="match-link" data-league="Soccer" data-frame="https://topembed.pw/channel/TNT[USA]">
+                        <div class="match-card">
+                            <div class="match-league">FIFA CLUB WORLD CUP</div>
+                            <div class="match-title">Fluminense vs Al Hilal
+                            </div>
+                            <div class="match-time">July 4, 2025 - 3:00 PM ET</div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/MLBNetwork[USA]">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">New York Mets vs New York Yankees
+                            </div>
+                            <div class="match-time">July 4, 2025 - 3:10 PM ET</div>
+                        </div>
+                    </div>
+
+                    <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/exPIT-SEA-SNP">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Seattle Mariners vs Pittsburgh Pirates
+                            </div>
+                            <div class="match-time">July 4, 2025 - 4:10 PM ET</div>
+                        </div>
+                    </div>
+
+                    <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/exTB-MIN-MNNT">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Minnesota Twins vs Tampa Bay Rays
+                            </div>
+                            <div class="match-time">July 4, 2025 - 4:10 PM ET</div>
+                        </div>
+                    </div>
+
+
+                    <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/ex8011640">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">San Diego Padres vs Texas Rangers
+                            </div>
+                            <div class="match-time">July 4, 2025 - 6:40 PM ET</div>
+                        </div>
+                    </div>
+
+
+                    <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/ex8011649">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Toronto Blue Jays vs Los Angeles Angels
+                            </div>
+                            <div class="match-time">July 4, 2025 - 7:07 PM ET</div>
+                        </div>
+                    </div>
+
+                    <div class="match-link" data-league="MLB"
+                        data-frame="https://topembed.pw/channel/FanDuelSportsDetroit[USA]">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Cleveland Guardians vs Detroit Tigers
+                            </div>
+                            <div class="match-time">July 4, 2025 - 7:10 PM ET</div>
+                        </div>
+                    </div>
+
+                    <div class="match-link" data-league="MLB"
+                        data-frame="https://topembed.pw/channel/FanDuelSportsFlorida[USA]">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Miami Marlins vs Milwaukee Brewers
+                            </div>
+                            <div class="match-time">July 4, 2025 - 7:10 PM ET</div>
+                        </div>
+                    </div>
+
+                    <div class="match-link" data-league="MLB"
+                        data-frame="https://topembed.pw/channel/FanDuelSportsSoutheast[USA]">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Atlanta Braves vs Baltimore Orioles
+                            </div>
+                            <div class="match-time">July 4, 2025 - 7:15 PM ET</div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="match-link" data-league="NFL" data-frame="https://topembed.pw/channel/TSN4[Canada]">
+                        <div class="match-card">
+                            <div class="match-league">CFL</div>
+                            <div class="match-title">Toronto Argonauts vs Hamilton Tiger-Cats
+                            </div>
+                            <div class="match-time">July 4, 2025 - 8:30 PM ET</div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="match-link" data-league="MLS" data-frame="https://topembed.pw/channel/FOXSports1[USA]">
+                        <div class="match-card">
+                            <div class="match-league">MLS</div>
+                            <div class="match-title">FC Dallas vs Minnesota United
+                            </div>
+                            <div class="match-time">July 4, 2025 - 8:45 PM ET</div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="match-link" data-league="Soccer"
+                        data-frame="https://topembed.pw/channel/DirecTVSports[Argentina]">
+                        <div class="match-card">
+                            <div class="match-league">FIFA CLUB WORLD CUP</div>
+                            <div class="match-title">Palmeiras vs Chelsea
+                            </div>
+                            <div class="match-time">July 4, 2025 - 9:00 PM ET</div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/exHOU-LAD-SNLA">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Los Angeles Dodgers vs Houston Astros
+                            </div>
+                            <div class="match-time">July 4, 2025 - 9:10 PM ET</div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="match-link" data-league="MLS" data-frame="https://topembed.pw/channel/FOXSports1[USA]">
+                        <div class="match-card">
+                            <div class="match-league">MLS</div>
+                            <div class="match-title">Colorado Rapids vs Sporting Kansas City
+                            </div>
+                            <div class="match-time">July 4, 2025 - 9:30 PM ET</div>
+                        </div>
+                    </div>
+
+
+                    <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/MLBNetwork[USA]">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Arizona Diamondbacks vs Kansas City Royals
+                            </div>
+                            <div class="match-time">July 4, 2025 - 9:40 PM ET</div>
+                        </div>
+                    </div>
+
+
+                    <div class="match-link" data-league="MLB" data-frame="https://topembed.pw/channel/MLBNetwork[USA]">
+                        <div class="match-card">
+                            <div class="match-league">MLB</div>
+                            <div class="match-title">Athletics vs San Francisco Giants
+                            </div>
+                            <div class="match-time">July 4, 2025 - 10:05 PM ET</div>
+                        </div>
+                    </div>
+
+
+                    <div class="match-link" data-league="MLS" data-frame="https://topembed.pw/channel/TSN1[Canada]">
+                        <div class="match-card">
+                            <div class="match-league">MLS</div>
+                            <div class="match-title">LA Galaxy vs Vancouver Whitecaps
+                            </div>
+                            <div class="match-time">July 4, 2025 - 10:30 PM ET</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key': 'c056290ae6472fcc026e9aa3e4433ff2',
+                        'format': 'iframe',
+                        'height': 300,
+                        'width': 160,
+                        'params': {}
+                    };
+                </script>
+                <script type="text/javascript"
+                    src="//www.highperformanceformat.com/c056290ae6472fcc026e9aa3e4433ff2/invoke.js"></script>
+
+
+
+                <script type="text/javascript">
+                    atOptions = {
+                        'key': '4ef2fc17a7faded8a267471f28b41d6f',
+                        'format': 'iframe',
+                        'height': 600,
+                        'width': 160,
+                        'params': {}
+                    };
+                </script>
+                <script type="text/javascript"
+                    src="//www.highperformanceformat.com/4ef2fc17a7faded8a267471f28b41d6f/invoke.js"></script>
+
+
+
+
+            </aside>
+        </div>
     </div>
-  </div>
 
-  <script>
-    document.querySelectorAll('.league-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.league-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
+    <script>
+        document.querySelectorAll('.league-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.league-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
 
-        const selectedLeague = tab.getAttribute('data-league');
-        const matches = document.querySelectorAll('.match-link');
+                const selectedLeague = tab.getAttribute('data-league');
+                const matches = document.querySelectorAll('.match-link');
 
-        matches.forEach(match => {
-          const league = match.getAttribute('data-league');
-          match.style.display = (selectedLeague === 'All' || selectedLeague === league) ? 'block' : 'none';
+                matches.forEach(match => {
+                    const league = match.getAttribute('data-league');
+                    match.style.display = (selectedLeague === 'All' || selectedLeague === league) ? 'block' : 'none';
+                });
+            });
         });
-      });
-    });
 
-    function searchMatches() {
-      const input = document.getElementById('searchBox').value.toLowerCase();
-      const matches = document.querySelectorAll('.match-link');
+        function searchMatches() {
+            const input = document.getElementById('searchBox').value.toLowerCase();
+            const matches = document.querySelectorAll('.match-link');
 
-      matches.forEach(match => {
-        const title = match.querySelector('.match-title')?.textContent.toLowerCase() || '';
-        const league = match.getAttribute('data-league').toLowerCase();
-        match.style.display = (title.includes(input) || league.includes(input)) ? 'block' : 'none';
-      });
-    }
-
-    document.querySelectorAll('.match-link').forEach(el => {
-      el.addEventListener('click', function () {
-        const frameLink = this.getAttribute('data-frame');
-        if (frameLink) {
-          window.location.href = `/player.html?frame=${encodeURIComponent(frameLink)}`;
+            matches.forEach(match => {
+                const title = match.querySelector('.match-title')?.textContent.toLowerCase() || '';
+                const league = match.getAttribute('data-league').toLowerCase();
+                match.style.display = (title.includes(input) || league.includes(input)) ? 'block' : 'none';
+            });
         }
-      });
-    });
-  </script>
+
+        document.querySelectorAll('.match-link').forEach(el => {
+            el.addEventListener('click', function () {
+                const frameLink = this.getAttribute('data-frame');
+                if (frameLink) {
+                    window.location.href = `/player.html?frame=${encodeURIComponent(frameLink)}`;
+                }
+            });
+        });
+    </script>
+    <!-- Histats.com  (div with counter) -->
+    <div id="histats_counter" style="display: none !important;"></div>
+
+    <!-- Histats.com  START  (async) -->
+    <script type="text/javascript">
+        var _Hasync = _Hasync || [];
+        _Hasync.push(['Histats.start', '1,4954898,4,511,95,18,00000000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+
+        (function () {
+            var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+            hs.src = ('//s10.histats.com/js15_as.js');
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();
+    </script>
+
+    <noscript>
+        <a href="/" target="_blank">
+            <img src="//sstatic1.histats.com/0.gif?4954898&amp;101" alt="web stats" border="0"
+                style="display: none !important;" />
+        </a>
+    </noscript>
+    <!-- Histats.com  END -->
 </body>
 
 </html>
