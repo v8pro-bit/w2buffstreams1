@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuffStreams | Live Sports Streams - NFL, NBA, UFC, Soccer HD</title>
+  <link href="css/style.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.png" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="https://w2.buffstreams24.sbs/" style="text-decoration: none; color: inherit;">
+        <div class="site-name">━★ w2.BuffStreams24.sbs ★━</div>
+      </a>
+      <nav class="nav-links">
+        <a href="/category/Soccer-streams">Soccer Streams</a>
+        <a href="/category/a.m-football-streams">A.M Football Streams</a>
+        <a href="/category/ufc-streams">UFC Streams</a>
+        <a href="/category/nba-streams">NBA Streams</a>
+        <a href="/category/baseball-streams">Baseball</a>
+        <a href="/category/boxing-streams">Boxing</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="main-wrapper">
+    <div id="matches-wrapper">
+      <!-- Ad Block -->
+      <div style=" margin: 20 0; margin-top: -10PX; margin-bottom: 20px;">
+        <script type="text/javascript">
+          atOptions = {
+            'key': 'c20f10954c08f6a27a338dec0a893fa1',
+            'format': 'iframe',
+            'height': 90,
+            'width': 728,
+            'params': {}
+          };
+        </script>
+        <script type="text/javascript"
+          src="//www.highperformanceformat.com/c20f10954c08f6a27a338dec0a893fa1/invoke.js"></script>
+      </div>
+
+    </div>
+
+    <!-- Sidebar ONLY once here -->
+    <div class="sidebar-box">
+      <div style="margin-bottom: 20px;">
+        <script type="text/javascript">
+          atOptions = {
+            'key': '6f9d413a17f9faceb3acbce2d94a743d',
+            'format': 'iframe',
+            'height': 300,
+            'width': 160,
+            'params': {}
+          };
+        </script>
+        <script type="text/javascript"
+          src="//www.highperformanceformat.com/6f9d413a17f9faceb3acbce2d94a743d/invoke.js"></script>
+      </div>
+
+      <!-- Second Ad -->
+      <div>
+        <script type="text/javascript">
+          atOptions = {
+            'key': '0ebcd43bfbdcba316bf97e7df886f9cb',
+            'format': 'iframe',
+            'height': 600,
+            'width': 160,
+            'params': {}
+          };
+        </script>
+        <script type="text/javascript"
+          src="//www.highperformanceformat.com/0ebcd43bfbdcba316bf97e7df886f9cb/invoke.js"></script>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const apiUrl = "https://opensheet.elk.sh/1rAbb9FatONKR_xwYXQ-1H2FJ90JLe_gwlmWtBYvCQgs/Sheet1";
+    const wrapper = document.getElementById("matches-wrapper");
+
+    async function fetchMatches() {
+      try {
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+
+        // Filter only valid matches with both teams present
+        const validMatches = data.filter(m => m["TEAM 1"]?.trim() && m["TEAM 2"]?.trim());
+
+        // Loop in steps of 2 for 2 matches per row
+        for (let i = 0; i < validMatches.length; i += 2) {
+          const row = document.createElement("div");
+          row.className = "row";
+
+          const match1 = validMatches[i];
+          const card1 = createMatchCard(match1);
+          row.appendChild(card1);
+
+          if (validMatches[i + 1]) {
+            const match2 = validMatches[i + 1];
+            const card2 = createMatchCard(match2);
+            row.appendChild(card2);
+          }
+
+          wrapper.appendChild(row);
+        }
+      } catch (err) {
+        wrapper.innerHTML = "<p style='color:red;'>Error loading matches</p>";
+        console.error(err);
+      }
+    }
+
+    function createMatchCard(match) {
+      let timeKey = Object.keys(match).find(k => k.trim().toLowerCase() === "time");
+      const timeRaw = timeKey ? match[timeKey] : null;
+      const time = timeRaw?.replace(/\u00A0/g, ' ').trim() || "Time not found";
+
+      const card = document.createElement("div");
+      card.className = "match-card";
+      card.onclick = () => {
+        if (match["IFRAME"]) {
+          const encodedUrl = encodeURIComponent(match["IFRAME"]);
+          window.open(`watch.html?url=${encodedUrl}`, "_blank");
+        }
+      };
+
+      card.innerHTML = `
+    <div class="countdown">${time}</div>
+    <div class="team">
+      <img src="${match["LOGO 1"]}" alt="">
+      <strong>${match["TEAM 1"]}</strong>
+    </div>
+    <div class="team">
+      <img src="${match["LOGO 2"]}" alt="">
+      <strong>${match["TEAM 2"]}</strong>
+    </div>
+    <div class="league">${match["LEAGUE"] || "Unknown League"}</div>
+  `;
+
+      return card;
+    }
+
+    fetchMatches();
+  </script>
+
+</body>
+</html>
