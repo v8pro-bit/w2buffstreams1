@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #12161C;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Updated site header */
+.site-header {
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 30px;
+  border-bottom: 1px solid #2a3245; 
+  background-color: #1e2430;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+}
+
+/* Optional wrapper inside header to limit width and center */
+.header-inner {
+  width: 100%;
+  max-width: 1200px; /* Keeps layout centered on large screens */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo styling */
+.logo {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 0px;
+}
+
+/* Navigation styling */
+.streams-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-left: 30px;
+  margin-top: 3px;
+}
+
+.streams-nav a {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.streams-nav a:hover {
+  text-decoration: underline;
+}
+
+
+
+.container {
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-start;
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 0 20px;
+  gap: 30px; /* Space between match and sidebar */
+}
+
+.search-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+  border-radius: 8px;
+  padding: 12px 15px;
+  background-color: #2c3443;
+  border: 1px solid #3c4556; 
+  margin-bottom: -10px;
+}
+
+.search-box svg.icon {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  margin-right: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+
+.matches-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 1px solid #2a3245; 
+  background-color: #1e2430;
+  border-radius: 15px;
+  padding: 25px;
+  padding-bottom: 40px;
+}
+
+
+.main-content {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.match-box {
+  background-color: #2c3443;
+  border: 1px solid #3c4556; 
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1500px;
+  position: relative;
+  text-align: center;
+  transition: 0.3s;
+  margin-bottom: -10px;
+  cursor: pointer;
+}
+
+
+.match-box:hover {
+      background-color: #3b465a;
+}
+
+.match-header {
+  position: fixed;      /* viewport mein fix kar dega */
+  top: 10px;            /* thoda upar se space */
+  left: 10px;           /* left se 10px door */
+      background-color: #3b465a;
+        border: 1px solid #4c5870; 
+  padding: 5px 15px;
+  border-radius: 50px;
+  color: #22c55e;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 1000;        /* sabse upar rahe */
+  white-space: nowrap;  /* text ek line me rahe */
+  display: inline-block;
+  text-align: left;
+  margin: 0;            /* margin reset */
+}
+
+
+
+.teams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  gap: 30px;
+  margin-bottom: 5px;
+}
+
+.teams img {
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  object-fit: cover;
+}
+
+
+
+.match-date,
+.match-time {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #ccc;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .match-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: #ccc;
+    margin-left: -20px;
+  }
+
+  /* Updated: smaller font size */
+  .date-container,
+  .time-container {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  /* Updated: smaller SVG icon */
+  .match-info svg {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+    fill: none;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+
+.sidebar {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 300px;
+  max-width: 350px;
+  margin-top: -15px;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #ff4081;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 12px;
+}
+
+.sidebar a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* thoda chhota font mobile pe */
+  }
+
+  .site-header {
+    padding: 15px 20px;
+  }
+
+  .streams-nav {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .streams-nav a {
+    font-size: 13px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 0 10px;
+    margin: 20px auto;
+    gap: 20px;
+  }
+
+  .main-content {
+    flex: unset;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .matches-container {
+    max-width: 100%;
+    padding: 20px 15px;
+    border-radius: 10px;
+  }
+
+  .match-box {
+    padding: 20px 70px;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .match-header {
+    font-size: 18px;
+    padding: 4px 10px;
+    top: 5px;
+    left: 5px;
+  }
+
+  .teams {
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .teams img {
+    height: 45px;
+    width: 45px;
+    padding: 7px;
+  }
+
+  .match-date,
+  .match-time {
+    font-size: 14px;
+  }
+
+  .match-info {
+    gap: 12px;
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .date-container,
+  .time-container {
+    font-size: 13px;
+  }
+
+  .match-info svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    min-width: unset;
+    border-left: none;
+    border-top: 2px solid #222;
+    padding: 15px 10px;
+    border-radius: 0 0 10px 10px;
+    margin-top: 20px;
+  }
+
+  .sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+  }
+}
+
+  @media (max-width: 768px) {
+  .mobile-ad {
+    display: block;
+    width: 100vw;        /* Use viewport width */
+    max-width: 100vw;    /* Limit max width */
+    overflow: hidden;
+    margin: 20px 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .mobile-ad iframe {
+    width: 100% !important;
+    height: 90px !important;
+    border: none;
+    display: block;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .streams-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .streams-nav a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    padding: 15px;
+    margin-top: 20px;
+    border-left: none;
+    border-top: 2px solid #222;
+    border-radius: 0;
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+  }
+
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+}

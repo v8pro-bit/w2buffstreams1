@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuffStreams | BOXING</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+
+
+
+    <!-- header -->
+    <header class="site-header">
+        <div class="logo">w2.BuffStreams24.sbs</div>
+        <nav class="streams-nav">
+            <a href="nfl.html">NFL streams</a>
+            <a href="nba.html">NBA streams</a>
+            <a href="mlb.html">MLB streams</a>
+            <a href="boxing.html">BOXING streams</a>
+            <a href="mma.html">MMA/UFC streams</a>
+            <a href="ncaab.html">NCAAB streams</a>
+            <a href="cfb.html">CFB streams</a>
+            <a href="soccer.html">Soccer streams</a>
+        </nav>
+    </header>
+
+
+
+    <!-- Discord -->
+    <div style="display: flex; justify-content: center; margin-top: 40px;">
+        <a href="https://discord.com/invite/m773TTNr" target="_blank" style="
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 25px;
+    border-radius: 999px;
+ border: 1px solid #2e3542;
+      background-color: #232834;
+          color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 19px;
+    transition: transform 0.2s ease;
+    margin-top: 5px;
+  " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="https://static.vecteezy.com/system/resources/previews/023/986/880/non_2x/discord-logo-discord-logo-transparent-discord-icon-transparent-free-free-png.png"
+                alt="Discord Logo" style="width: 50px; height: 48px; margin-left: -10px;">
+            Join Discord
+        </a>
+    </div>
+
+
+
+    <!-- container -->
+    <div class="container">
+
+
+        <!-- main-content -->
+        <main class="main-content">
+
+
+
+            <!-- matches-container -->
+            <div class="matches-container">
+
+                <div class="mobile-ad">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key': '3f8143f325666e9470bcb5af38573dd5',
+                            'format': 'iframe',
+                            'height': 90,
+                            'width': 728,
+                            'params': {}
+                        };
+                    </script>
+                    <script type="text/javascript"
+                        src="//www.highperformanceformat.com/3f8143f325666e9470bcb5af38573dd5/invoke.js"></script>
+                </div>
+
+
+                <!-- Search Box -->
+                <div class="search-box">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search league, teams, match..." />
+                </div>
+
+
+
+                <!-- Matches -->
+
+
+
+
+
+
+
+                <!-- Matches -->
+            </div>
+        </main>
+
+
+
+        <!-- sidebar -->
+        <aside class="sidebar">
+            <script type="text/javascript">
+                atOptions = {
+                    'key': 'b145f0a8ad4e19e103be39d5a7fa45be',
+                    'format': 'iframe',
+                    'height': 300,
+                    'width': 160,
+                    'params': {}
+                };
+            </script>
+            <script type="text/javascript"
+                src="//www.highperformanceformat.com/b145f0a8ad4e19e103be39d5a7fa45be/invoke.js"></script>
+
+            <script type="text/javascript">
+                atOptions = {
+                    'key': '475ea948a2b7dee94beb0656c6a6066b',
+                    'format': 'iframe',
+                    'height': 600,
+                    'width': 160,
+                    'params': {}
+                };
+            </script>
+            <script type="text/javascript"
+                src="//www.highperformanceformat.com/475ea948a2b7dee94beb0656c6a6066b/invoke.js"></script>
+        </aside>
+    </div>
+
+
+
+
+    <!-- Javascript -->
+    <script>
+        document.querySelectorAll(".match-box").forEach((box) => {
+            box.addEventListener("click", () => {
+                const iframeUrl = box.getAttribute("data-iframe");
+                if (iframeUrl) {
+                    const encodedUrl = encodeURIComponent(iframeUrl);
+                    window.open(`watch.html?url=${encodedUrl}`, "_blank");
+                }
+            });
+        });
+    </script>
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const matchBoxes = document.querySelectorAll(".match-box");
+
+        searchInput.addEventListener("input", function () {
+            const query = this.value.toLowerCase();
+
+            matchBoxes.forEach((box) => {
+                const league = box.querySelector(".match-header")?.innerText.toLowerCase() || "";
+                const teams = box.querySelector(".teams span")?.innerText.toLowerCase() || "";
+
+                if (league.includes(query) || teams.includes(query)) {
+                    box.style.display = "block";
+                } else {
+                    box.style.display = "none";
+                }
+            });
+        });
+    </script>
+    <!-- Traffic Counter  -->
+    <div id="histats_counter" style="display: none !important;"></div>
+    <script type="text/javascript">
+        var _Hasync = _Hasync || [];
+        _Hasync.push(['Histats.start', '1,4954898,4,511,95,18,00000000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+
+        (function () {
+            var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+            hs.src = ('//s10.histats.com/js15_as.js');
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();
+    </script>
+    <noscript>
+        <a href="/" target="_blank">
+            <img src="//sstatic1.histats.com/0.gif?4954898&amp;101" alt="web stats" border="0"
+                style="display: none !important;" />
+        </a>
+    </noscript>
+</body>
+</html>
