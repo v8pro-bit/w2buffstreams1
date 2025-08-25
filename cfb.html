@@ -8019,18 +8019,24 @@
             });
         });
     </script>
-   <script>
+  <script>
     const searchInput = document.getElementById("searchInput");
     const matchBoxes = document.querySelectorAll(".match-box");
-    const dateBar = document.getElementById("dateBar");
+    const dateBars = document.querySelectorAll("#dateBar, .dateBar"); 
 
     searchInput.addEventListener("input", function () {
         const query = this.value.toLowerCase();
         let found = false;
 
+        if (query.length > 0) {
+            dateBars.forEach((bar) => bar.style.display = "none");
+        } else {
+            dateBars.forEach((bar) => bar.style.display = "block");
+        }
+
         matchBoxes.forEach((box) => {
             const league = box.querySelector(".match-header")?.innerText.toLowerCase() || "";
-            const teams = box.querySelector(".teams span")?.innerText.toLowerCase() || "";
+            const teams = box.querySelector(".teams")?.innerText.toLowerCase() || "";
 
             if (league.includes(query) || teams.includes(query)) {
                 box.style.display = "block";
@@ -8039,14 +8045,9 @@
                 box.style.display = "none";
             }
         });
-
-        if (!found) {
-            dateBar.style.display = "none";
-        } else {
-            dateBar.style.display = "block";
-        }
     });
 </script>
+
 
     <!-- Traffic Counter  -->
     <div id="histats_counter" style="display: none !important;"></div>
@@ -8071,5 +8072,6 @@
 </body>
 
 </html>
+
 
 
